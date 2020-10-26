@@ -9,18 +9,20 @@
         <Rule>
             <TextSymbolizer
                 placement="grid"
+                line-spacing="5"
                 halo-radius="4"
                 halo-fill="#ffffff"
                 halo-bgsmooth="true"
+                halo-bgsmooth-group="character"
                 halo-bgsmooth-min="#111111"
                 halo-bgsmooth-max="#ffffff"
                 halo-bgsmooth-outlier-lotrim="0.4"
                 halo-bgsmooth-outlier-hitrim="0.4"
                 face-name="DejaVu Sans Book"
                 grid-cell-width="90"
-                grid-cell-height="40"
+                grid-cell-height="70"
                 size="12">
-                "ABCD"
+                "AB CD\nEF GH"
             </TextSymbolizer>
         </Rule>
     </Style>

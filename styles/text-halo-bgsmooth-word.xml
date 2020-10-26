@@ -1,0 +1,74 @@
+<Map srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+    background-image="../../data/images/na.jpg">
+    <Parameters>
+        <Parameter name="sizes">1826,1716</Parameter>
+        <Parameter name="bbox">-90,-90,90,90</Parameter>
+    </Parameters>
+
+    <Style name="polygontext">
+        <Rule>
+            <TextSymbolizer
+                placement="grid"
+                line-spacing="5"
+                halo-radius="4"
+                halo-fill="#ffffff"
+                halo-bgsmooth="true"
+                halo-bgsmooth-group="word"
+                halo-bgsmooth-min="#111111"
+                halo-bgsmooth-max="#ffffff"
+                halo-bgsmooth-outlier-lotrim="0.4"
+                halo-bgsmooth-outlier-hitrim="0.4"
+                face-name="DejaVu Sans Book"
+                grid-cell-width="90"
+                grid-cell-height="70"
+                size="12">
+                "AB CD\nEF GH"
+            </TextSymbolizer>
+        </Rule>
+    </Style>
+
+    <Layer name="polygon" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+        <StyleName>polygontext</StyleName>
+        <Datasource>
+            <Parameter name="type">geojson</Parameter>
+            <Parameter name="inline">
+              {
+                "type": "FeatureCollection",
+                "features": [
+                  {
+                    "type": "Feature",
+                    "properties": {},
+                    "geometry": {
+                      "type": "Polygon",
+                      "coordinates": [
+                        [
+                          [
+                            -90,
+                            -90
+                          ],
+                          [
+                            90,
+                            -90
+                          ],
+                          [
+                            90,
+                            90
+                          ],
+                          [
+                            -90,
+                            90
+                          ],
+                          [
+                            -90,
+                            -90
+                          ]
+                        ]
+                      ]
+                    }
+                  }
+                ]
+              }
+            </Parameter>
+        </Datasource>
+    </Layer>
+</Map>
